@@ -15,5 +15,5 @@ if ($result) {
         header("Location: index.php?insert_msg=Article successfully inserted");
         exit();
     } else {
-        echo "Error: " . mysqli_error($connection);
+        echo "Error: " . mysqli_error($conn);
     }

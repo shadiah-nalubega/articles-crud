@@ -9,7 +9,7 @@ $res = mysqli_query($conn, $sql);
 $row= mysqli_fetch_assoc($res);  //returns a single reocord
 // var_dump($data);
 if (!$row) {
-    die("Report not found");
+    die("Article not found");
 }
 ?>
 
@@ -36,7 +36,7 @@ if (!$row) {
                             Update Article
                         </h2>
 
-                        <form method="POST" action="updatecontroller.php">
+                        <form method="POST" action="updatecontroller.php?id=<?=$row['id']?>">
                             <!-- Title -->
                             <div class="mb-4">
                                 <label for="title" class="form-label fw-medium">

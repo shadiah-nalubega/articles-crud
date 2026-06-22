@@ -36,6 +36,27 @@ $articles = mysqli_fetch_all($result, MYSQLI_ASSOC); //returns an array of all i
             </div>
         </div>
     </nav>
+    <?php 
+    if(isset($_GET['update_msg'])){
+    echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">";
+    echo "<strong>" . $_GET['update_msg'] . "</strong>";
+    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+    echo "</div>";
+  }
+
+if(isset($_GET['insert_msg'])){
+    echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">";
+    echo "<strong>" . $_GET['insert_msg'] . "</strong>";
+    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+    echo "</div>";
+  }
+if(isset($_GET['delete_msg'])){
+    echo "<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">";
+    echo "<strong>" . $_GET['delete_msg'] . "</strong>";
+    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+    echo "</div>";
+  }
+    ?> 
  
  <div class="container">
 
